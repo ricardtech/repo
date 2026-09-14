@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repositório Oficial Linux - Play Max</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 0%, #1a1e29 0%, #0c0e14 100%);
+      --card-bg: rgba(22, 27, 39, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-color: #3b82f6;
+      --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --code-bg: #090c10;
+      --success-color: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--accent-gradient);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+
+    .code-block {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92rem;
+      color: #38bdf8;
+      overflow-x: auto;
+      position: relative;
+      margin-top: 0.5rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .instruction-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .packages-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .package-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pkg-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #f8fafc;
+    }
+
+    .pkg-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0.4rem 0 1rem 0;
+    }
+
+    .pkg-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .pkg-link:hover {
+      background: #3b82f6;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">Pacman Repository</div>
+      <h1>Play Max Linux</h1>
+      <p class="subtitle">Repositório Oficial de Pacotes para Arch Linux, Manjaro, BigLinux e derivados</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span>1</span> Adicionar o Repositório ao Pacman</div>
+      <p class="instruction-text">Abra o arquivo de configuração <code>/etc/pacman.conf</code> como root e adicione o bloco abaixo no final do arquivo:</p>
+      <div class="code-block">[playmax]
+SigLevel = Optional TrustAll
+Server = https://repo.rictv.top/$arch</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span>2</span> Sincronizar e Instalar</div>
+      <p class="instruction-text">Atualize os bancos de dados do Pacman e instale o pacote oficial:</p>
+      <div class="code-block">sudo pacman -Sy rp-play-max-linux</div>
+      <p class="instruction-text" style="margin-top: 0.8rem;">Ou abra a <strong>Central de Aplicativos (Pamac / Big Store)</strong> e pesquise por <code>Play Max</code> para instalar e receber atualizações automáticas com 1 clique.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span>3</span> Download Direto</div>
+      <div class="packages-list">
+        <div class="package-card">
+          <div>
+            <div class="pkg-title">RP - Play Max (Pacman)</div>
+            <div class="pkg-desc">Pacote nativo x86_64 v2.0.0 para Arch, Manjaro e BigLinux.</div>
+          </div>
+          <a href="x86_64/rp-play-max-linux-2.0.0.pkg.tar.xz" class="pkg-link">📥 Baixar .pkg.tar.xz</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 RicardTech • Play Max Linux Desktop
+    </footer>
+  </div>
+</body>
+</html>
