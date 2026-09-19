@@ -35,11 +35,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 820px;
       width: 100%;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -108,19 +108,67 @@
       color: #fff;
     }
 
+    .tag-rec {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 0.4rem;
+    }
+
+    .code-wrapper {
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
     .code-block {
       background: var(--code-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
-      padding: 1rem 1.25rem;
+      padding: 1.1rem 5.5rem 1.1rem 1.25rem;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.92rem;
       color: #38bdf8;
       overflow-x: auto;
-      position: relative;
-      margin-top: 0.5rem;
       white-space: pre-wrap;
       word-break: break-all;
+      line-height: 1.5;
+    }
+
+    .btn-copy {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .btn-copy:hover {
+      background: #3b82f6;
+      color: #ffffff;
+    }
+
+    .btn-copy.copied {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.5);
+      color: #34d399;
     }
 
     .instruction-text {
@@ -182,7 +230,7 @@
 
     footer {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       color: var(--text-muted);
       font-size: 0.85rem;
     }
@@ -196,37 +244,79 @@
       <p class="subtitle">Repositório Oficial de Pacotes para Arch Linux, Manjaro, BigLinux e derivados</p>
     </div>
 
+    <!-- SEÇÃO 1: FORMA RÁPIDA -->
     <div class="section">
-      <div class="section-title"><span>1</span> Adicionar o Repositório ao Pacman</div>
-      <p class="instruction-text">Abra o arquivo de configuração <code>/etc/pacman.conf</code> como root e adicione o bloco abaixo no final do arquivo:</p>
-      <div class="code-block">[playmax]
+      <div class="section-title">
+        <span>1</span> Instalação Rápida
+        <span class="tag-rec">Recomendado</span>
+      </div>
+      <p class="instruction-text">Adicione o repositório e instale o Play Max com um único comando no terminal:</p>
+      <div class="code-wrapper">
+        <div class="code-block" id="cmd-quick">echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.rictv.top/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy rp-play-max-linux</div>
+        <button class="btn-copy" onclick="copyCode('cmd-quick', this)">📋 Copiar</button>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: FORMA MANUAL -->
+    <div class="section">
+      <div class="section-title"><span>2</span> Instalação Manual (Passo a Passo)</div>
+      <p class="instruction-text">Caso prefira editar manualmente, adicione ao final de <code>/etc/pacman.conf</code>:</p>
+      <div class="code-wrapper">
+        <div class="code-block" id="cmd-repo">[playmax]
 SigLevel = Optional TrustAll
 Server = https://repo.rictv.top/$arch</div>
+        <button class="btn-copy" onclick="copyCode('cmd-repo', this)">📋 Copiar</button>
+      </div>
+      
+      <p class="instruction-text" style="margin-top: 1rem;">Depois, sincronize e instale o pacote oficial:</p>
+      <div class="code-wrapper">
+        <div class="code-block" id="cmd-install">sudo pacman -Sy rp-play-max-linux</div>
+        <button class="btn-copy" onclick="copyCode('cmd-install', this)">📋 Copiar</button>
+      </div>
     </div>
 
+    <!-- SEÇÃO 3: LOJA GRÁFICA -->
     <div class="section">
-      <div class="section-title"><span>2</span> Sincronizar e Instalar</div>
-      <p class="instruction-text">Atualize os bancos de dados do Pacman e instale o pacote oficial:</p>
-      <div class="code-block">sudo pacman -Sy rp-play-max-linux</div>
-      <p class="instruction-text" style="margin-top: 0.8rem;">Ou abra a <strong>Central de Aplicativos (Pamac / Big Store)</strong> e pesquise por <code>Play Max</code> para instalar e receber atualizações automáticas com 1 clique.</p>
+      <div class="section-title"><span>3</span> Instalação via Interface Gráfica</div>
+      <p class="instruction-text">Após adicionar o repositório, você também pode abrir a <strong>Central de Aplicativos (Pamac / Big Store / Octopi)</strong>, pesquisar por <code>Play Max</code> e clicar em <strong>Instalar</strong> para receber atualizações automáticas do sistema.</p>
     </div>
 
+    <!-- SEÇÃO 4: DOWNLOAD DIRETO -->
     <div class="section">
-      <div class="section-title"><span>3</span> Download Direto</div>
+      <div class="section-title"><span>4</span> Download Direto do Pacote</div>
       <div class="packages-list">
         <div class="package-card">
           <div>
             <div class="pkg-title">RP - Play Max (Pacman)</div>
-            <div class="pkg-desc">Pacote nativo x86_64 v2.1.3 para Arch, Manjaro e BigLinux.</div>
+            <div class="pkg-desc">Pacote nativo x86_64 v2.1.4 para Arch, Manjaro e BigLinux.</div>
           </div>
-          <a href="x86_64/rp-play-max-linux-2.1.3.pkg.tar.xz" class="pkg-link">📥 Baixar .pkg.tar.xz</a>
+          <a href="x86_64/rp-play-max-linux-2.1.4.pkg.tar.xz" class="pkg-link">📥 Baixar .pkg.tar.xz</a>
         </div>
       </div>
     </div>
 
     <footer>
-      © 2026 RicardTech • Play Max Linux Desktop
+      © 2026 RicardTech • Play Max Linux Desktop & Notebook
     </footer>
   </div>
+
+  <script>
+    function copyCode(elementId, btn) {
+      const codeElement = document.getElementById(elementId);
+      if (!codeElement) return;
+      const text = codeElement.innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✓ Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Falha ao copiar:', err);
+      });
+    }
+  </script>
 </body>
 </html>
