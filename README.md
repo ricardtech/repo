@@ -43,15 +43,15 @@ Após adicionar o repositório ao `/etc/pacman.conf`:
 
 ---
 
-## 📥 3. Downloads Diretos (Versão v2.2.0)
+## 📥 3. Downloads Diretos (Versão v2.2.1)
 
 Você também pode baixar os arquivos binários diretamente:
 
 | Formato | Distribuições Compatíveis | Link de Download |
 | :--- | :--- | :--- |
-| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.rictv.top/x86_64/rp-play-max-linux-2.2.0.pkg.tar.xz) |
-| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.rictv.top/x86_64/RP%20-%20Play%20Max-2.2.0.AppImage) |
-| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.rictv.top/x86_64/rp-play-max-linux_2.2.0_amd64.deb) |
+| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.rictv.top/x86_64/rp-play-max-linux-2.2.1.pkg.tar.xz) |
+| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.rictv.top/x86_64/RP%20-%20Play%20Max-2.2.1.AppImage) |
+| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.rictv.top/x86_64/rp-play-max-linux_2.2.1_amd64.deb) |
 
 ---
 
@@ -61,7 +61,7 @@ Para administradores atualizarem a base de dados do repositório ALPM/Pacman:
 
 ```bash
 cd x86_64
-repo-add -n -R playmax.db.tar.gz rp-play-max-linux-2.2.0.pkg.tar.xz
+repo-add -n -R playmax.db.tar.gz rp-play-max-linux-2.2.1.pkg.tar.xz
 ```
 
 ---
