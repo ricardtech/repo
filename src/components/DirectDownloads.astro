@@ -1,0 +1,334 @@
+---
+// DirectDownloads.astro
+const downloads = [
+  {
+    name: "Arch Linux / Manjaro",
+    ext: ".pkg.tar.xz",
+    type: "Pacote Nativo ALPM",
+    desc: "Instalador otimizado para Pacman com integração nativa ao sistema operacional.",
+    url: "https://repo.rictv.top/x86_64/rp-play-max-linux-2.2.2.pkg.tar.xz",
+    filename: "rp-play-max-linux-2.2.2.pkg.tar.xz",
+    size: "~118 MB",
+    icon: "🏹",
+    highlight: false,
+  },
+  {
+    name: "AppImage Universal",
+    ext: ".AppImage",
+    type: "Portátil (Todas as Distros)",
+    desc: "Executável único plug-and-play. Funciona em qualquer distribuição Linux de 64 bits.",
+    url: "https://repo.rictv.top/x86_64/RP%20-%20Play%20Max-2.2.2.AppImage",
+    filename: "RP - Play Max-2.2.2.AppImage",
+    size: "~118 MB",
+    icon: "🚀",
+    highlight: true,
+    badge: "Mais Popular",
+  },
+  {
+    name: "Debian / Ubuntu / Mint",
+    ext: ".deb",
+    type: "Pacote Nativo APT",
+    desc: "Instalador para Debian, Ubuntu, Linux Mint, Pop!_OS e Zorin OS com atalho no menu.",
+    url: "https://repo.rictv.top/x86_64/rp-play-max-linux_2.2.2_amd64.deb",
+    filename: "rp-play-max-linux_2.2.2_amd64.deb",
+    size: "~118 MB",
+    icon: "🐧",
+    highlight: false,
+  },
+];
+---
+
+<section class="downloads-section">
+  <div class="section-header">
+    <div class="title-with-badge">
+      <h2 class="section-title">Downloads Diretos</h2>
+      <span class="arch-badge">x86_64 (64-bit)</span>
+    </div>
+    <p class="section-subtitle">Baixe o binário compatível com a sua distribuição Linux ou escolha a versão universal.</p>
+  </div>
+
+  <div class="downloads-grid">
+    {downloads.map((item) => (
+      <div class={`download-card ${item.highlight ? 'highlight-card' : ''}`}>
+        {item.badge && <div class="card-badge">{item.badge}</div>}
+        
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">{item.icon}</div>
+            <div class="card-titles">
+              <h3 class="card-title">{item.name}</h3>
+              <span class="card-type">{item.type}</span>
+            </div>
+          </div>
+
+          <p class="card-desc">{item.desc}</p>
+
+          <div class="card-meta">
+            <span class="meta-tag"><code>{item.ext}</code></span>
+            <span class="meta-size">{item.size}</span>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href={item.url} class="btn-download" download>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Baixar {item.ext}</span>
+          </a>
+          
+          <button class="btn-copy-link" data-url={item.url} title="Copiar link direto de download">
+            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            <span class="copy-label">Copiar Link</span>
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  // Copy Link Script
+  document.querySelectorAll('.btn-copy-link').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const url = btn.getAttribute('data-url');
+      const label = btn.querySelector('.copy-label');
+      if (!url) return;
+
+      try {
+        await navigator.clipboard.writeText(url);
+        if (label) label.textContent = 'Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          if (label) label.textContent = 'Copiar Link';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Erro ao copiar URL:', err);
+      }
+    });
+  });
+</script>
+
+<style>
+  .downloads-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .title-with-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -0.02em;
+  }
+
+  .arch-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: #22d3ee;
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .section-subtitle {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .download-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .download-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -10px rgba(139, 92, 246, 0.25);
+  }
+
+  .highlight-card {
+    border-color: rgba(139, 92, 246, 0.35);
+    background: linear-gradient(180deg, rgba(30, 27, 75, 0.5) 0%, rgba(18, 24, 38, 0.8) 100%);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .card-titles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .card-type {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.45;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .meta-tag code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: #38bdf8;
+  }
+
+  .meta-size {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-gradient);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  }
+
+  .btn-download:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+    filter: brightness(1.1);
+  }
+
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-copy-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-copy-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+
+  .btn-copy-link.copied {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #34d399;
+  }
+
+  .copy-icon {
+    width: 14px;
+    height: 14px;
+  }
+</style>

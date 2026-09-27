@@ -1,2 +1,6 @@
 *.AppImage
 x86_64/*.AppImage
+node_modules/
+.astro/
+dist/
+

@@ -1,0 +1,112 @@
+---
+// Changelog.astro
+const changelogItems = [
+  "Atualização de estabilização do motor de renderização de vídeo para Linux",
+  "Suporte aprimorado ao protocolo DoT (DNS-over-TLS) para bypass de bloqueios",
+  "Correção no empacotamento ALPM / Pacman para suporte ao Arch Linux e Manjaro 2026",
+  "Redução do tamanho do executável AppImage e melhoria no tempo de abertura inicial",
+  "Sincronização de catálogo e compatibilidade estendida com streams HLS v4/v7",
+];
+---
+
+<section class="changelog-section">
+  <div class="changelog-card">
+    <div class="changelog-header">
+      <div class="changelog-title-box">
+        <svg class="changelog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        <h3 class="changelog-title">Notas da Versão v2.2.2</h3>
+      </div>
+      <span class="changelog-date">Setembro de 2026</span>
+    </div>
+
+    <ul class="changelog-list">
+      {changelogItems.map((item) => (
+        <li class="changelog-item">
+          <span class="check-bullet">✓</span>
+          <span class="item-text">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .changelog-section {
+    width: 100%;
+  }
+
+  .changelog-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .changelog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .changelog-title-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .changelog-icon {
+    width: 20px;
+    height: 20px;
+    color: #a855f7;
+  }
+
+  .changelog-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .changelog-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .changelog-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .changelog-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.87rem;
+    color: #cbd5e1;
+    line-height: 1.45;
+  }
+
+  .check-bullet {
+    color: #34d399;
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+</style>

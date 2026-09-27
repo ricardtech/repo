@@ -1,0 +1,347 @@
+---
+// DistroTabs.astro
+---
+
+<div class="tabs-container">
+  <div class="tabs-nav" role="tablist">
+    <button class="tab-btn active" data-tab="arch" role="tab" aria-selected="true">
+      <span class="tab-icon">⚡</span>
+      <span class="tab-title">Arch Linux / Manjaro</span>
+      <span class="tab-tag">Pacman</span>
+    </button>
+    <button class="tab-btn" data-tab="debian" role="tab" aria-selected="false">
+      <span class="tab-icon">🌀</span>
+      <span class="tab-title">Debian / Ubuntu / Mint</span>
+      <span class="tab-tag">APT</span>
+    </button>
+    <button class="tab-btn" data-tab="appimage" role="tab" aria-selected="false">
+      <span class="tab-icon">📦</span>
+      <span class="tab-title">Universal Linux</span>
+      <span class="tab-tag">AppImage</span>
+    </button>
+  </div>
+
+  <div class="tabs-content">
+    <!-- ARCH PANEL -->
+    <div id="tab-arch" class="tab-pane active" role="tabpanel">
+      <div class="pane-header">
+        <h3>Instalação via Repositório Pacman (x86_64)</h3>
+        <p>Receba atualizações automáticas do Play Max via <code>pacman -Syu</code>.</p>
+      </div>
+
+      <div class="step-card">
+        <span class="step-num">1</span>
+        <div class="step-info">
+          <h4>Instalação Automática em 1 Linha (Recomendado)</h4>
+          <p>Adiciona o repositório oficial ao <code>/etc/pacman.conf</code> e instala o aplicativo:</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <pre><code>echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.rictv.top/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy rp-play-max-linux</code></pre>
+        <button class="copy-btn" data-code="echo -e &quot;\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.rictv.top/\$arch&quot; | sudo tee -a /etc/pacman.conf &amp;&amp; sudo pacman -Sy rp-play-max-linux">
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-label">Copiar</span>
+        </button>
+      </div>
+
+      <div class="step-card">
+        <span class="step-num">2</span>
+        <div class="step-info">
+          <h4>Ou Atualização Manual</h4>
+          <p>Se o repositório já estiver configurado, basta sincronizar e atualizar:</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <pre><code>sudo pacman -Syu rp-play-max-linux</code></pre>
+        <button class="copy-btn" data-code="sudo pacman -Syu rp-play-max-linux">
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-label">Copiar</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- DEBIAN PANEL -->
+    <div id="tab-debian" class="tab-pane" role="tabpanel">
+      <div class="pane-header">
+        <h3>Instalação para Distribuições baseadas em Debian / Ubuntu</h3>
+        <p>Instale o pacote binário <code>.deb</code> oficial diretamente no seu sistema.</p>
+      </div>
+
+      <div class="step-card">
+        <span class="step-num">1</span>
+        <div class="step-info">
+          <h4>Baixe o pacote <code>.deb</code> oficial</h4>
+          <p>Utilize o terminal para baixar a versão mais recente:</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <pre><code>wget https://repo.rictv.top/rp-play-max-linux_2.2.2_amd64.deb</code></pre>
+        <button class="copy-btn" data-code="wget https://repo.rictv.top/rp-play-max-linux_2.2.2_amd64.deb">
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-label">Copiar</span>
+        </button>
+      </div>
+
+      <div class="step-card">
+        <span class="step-num">2</span>
+        <div class="step-info">
+          <h4>Instale via APT / dpkg</h4>
+          <p>Resolva as dependências e registre no menu de aplicativos:</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <pre><code>sudo apt install ./rp-play-max-linux_2.2.2_amd64.deb</code></pre>
+        <button class="copy-btn" data-code="sudo apt install ./rp-play-max-linux_2.2.2_amd64.deb">
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-label">Copiar</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- APPIMAGE PANEL -->
+    <div id="tab-appimage" class="tab-pane" role="tabpanel">
+      <div class="pane-header">
+        <h3>Execução Universal via AppImage</h3>
+        <p>Compatível com qualquer distribuição Linux de 64 bits sem necessidade de instalação root.</p>
+      </div>
+
+      <div class="step-card">
+        <span class="step-num">1</span>
+        <div class="step-info">
+          <h4>Baixe e conceda permissão de execução</h4>
+          <p>Execute os comandos para baixar e rodar instantaneamente:</p>
+        </div>
+      </div>
+      <div class="code-block">
+        <pre><code>wget -O "RP - Play Max.AppImage" "https://repo.rictv.top/RP%20-%20Play%20Max-2.2.2.AppImage"
+chmod +x "RP - Play Max.AppImage"
+./"RP - Play Max.AppImage"</code></pre>
+        <button class="copy-btn" data-code="wget -O &quot;RP - Play Max.AppImage&quot; &quot;https://repo.rictv.top/RP%20-%20Play%20Max-2.2.2.AppImage&quot;&#10;chmod +x &quot;RP - Play Max.AppImage&quot;&#10;./&quot;RP - Play Max.AppImage&quot;">
+          <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-label">Copiar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Tab Switcher Logic
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+      
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabPanes.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const activePane = document.getElementById(`tab-${targetTab}`);
+      if (activePane) activePane.classList.add('active');
+    });
+  });
+
+  // Copy to Clipboard Logic
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const code = btn.getAttribute('data-code');
+      const label = btn.querySelector('.copy-label');
+      if (!code) return;
+
+      try {
+        await navigator.clipboard.writeText(code);
+        if (label) label.textContent = 'Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          if (label) label.textContent = 'Copiar';
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Falha ao copiar:', err);
+      }
+    });
+  });
+</script>
+
+<style>
+  .tabs-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  }
+
+  .tabs-nav {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+
+  .tab-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+  }
+
+  .tab-btn.active {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.4);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  }
+
+  .tab-tag {
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: var(--text-muted);
+  }
+
+  .tab-btn.active .tab-tag {
+    background: rgba(139, 92, 246, 0.3);
+    color: #e9d5ff;
+  }
+
+  .tab-pane {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .tab-pane.active {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .pane-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .pane-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .step-info p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .code-block {
+    background: var(--code-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .code-block pre {
+    margin: 0;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #38bdf8;
+    line-height: 1.5;
+  }
+
+  .copy-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .copy-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+
+  .copy-btn.copied {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+    color: #34d399;
+  }
+
+  .copy-icon {
+    width: 14px;
+    height: 14px;
+  }
+</style>
