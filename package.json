@@ -1,7 +1,7 @@
 {
   "name": "playmax-repo",
   "type": "module",
-  "version": "2.3.0",
+  "version": "2.5.0",
   "scripts": {
     "dev": "astro dev --port 4321",
     "build": "astro build",
@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^7.0.0",
-    "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^5.0.0",
+    "astro": "7.3.5",
     "clsx": "^2.1.1",
     "lucide-react": "^1.48.0",
     "react": "^19.3.0",
