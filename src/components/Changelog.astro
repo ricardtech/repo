@@ -1,16 +1,15 @@
 ---
 // Changelog.astro
 const changelogItems = [
+  "Correção de Reprodução M3U8 e TS: Ajuste na engine do HLS.js garantindo carregamento fluido e eliminando tela escura",
+  "Controles Sempre Visíveis: Barra superior, botão de voltar e atalho ESC sempre operacionais mesmo durante sincronização ou falha de sinal",
+  "Switch Toggle GPU Moderno: Substituição do checkbox quadrado branco por chave deslizante iluminada nas configurações",
+  "Deduplicação de Perfis: Agrupamento automático de contas no modal de seleção evitando linhas duplicadas",
   "Auto-Alternância Inteligente de Canais: Troca automática e transparente entre qualidades (FHD -> HD -> SD) caso o sinal fique instável",
-  "Reconexão Resiliente em Segundo Plano: Tentativa contínua e inteligente de restauração de sinal para canais únicos",
-  "Otimização HLS com Buffer Estabilizado: Fim de congelamentos e eliminação do overlay pesado de carregamento",
-  "Correção de Contagem de Favoritos: Exibição precisa e independente por seção (Canais, Filmes e Séries)",
-  "Abas Unificadas e Limpas: Remoção de sub-menus duplicados da barra de categorias, priorizando alternância no topo",
-  "Nova Central 'Minha Lista' dedicada: Favoritos unificados e Continuar Assistindo com barra de progresso",
+  "Nova Central 'Minha Lista' dedicada: Favoritos unificados e Continuar Assistindo com barra de progresso em tempo real",
   "Séries no Histórico: Retomada direta instantânea do episódio e minuto onde parou sem abrir modal intermediário",
-  "Segurança do Servidor: Ocultação da URL de DNS nas Configurações contra ataques de força bruta e DDoS",
-  "Gestão de Perfis: Troca rápida de perfis oficiais do painel com desconexão automática da sessão anterior",
-  "Suporte WhatsApp Dinâmico: Sincronização em tempo real do número configurado no painel administrativo",
+  "Segurança & Failover Automático: Criptografia DoT e comutação instantânea para o DNS de contingência",
+  "Suporte WhatsApp Dinâmico: Sincronização em tempo real do contato oficial cadastrado no painel administrativo",
 ];
 ---
 
@@ -25,7 +24,7 @@ const changelogItems = [
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        <h3 class="changelog-title">Notas da Versão v2.4.2</h3>
+        <h3 class="changelog-title">Notas da Versão v2.4.3</h3>
       </div>
       <span class="changelog-date">Outubro de 2026</span>
     </div>
