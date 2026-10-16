@@ -2,7 +2,7 @@
 
 Repositório de pacotes e instaladores para o player de streaming **RP - Play Max** no Linux (Desktop & Notebook).
 
-🌐 **Acesse a página oficial do repositório:** [https://repo.rictv.top](https://repo.rictv.top)
+🌐 **Acesse a página oficial do repositório:** [https://repo.ricardtv.top](https://repo.ricardtv.top)
 
 ---
 
@@ -12,7 +12,7 @@ Repositório de pacotes e instaladores para o player de streaming **RP - Play Ma
 Adicione o repositório e instale com um único comando no terminal:
 
 ```bash
-echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.rictv.top/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy rp-play-max-linux
+echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.ricardtv.top/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy rp-play-max-linux
 ```
 
 ### Forma Manual (Passo a Passo)
@@ -24,7 +24,7 @@ echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.rictv.
    ```ini
    [playmax]
    SigLevel = Optional TrustAll
-   Server = https://repo.rictv.top/$arch
+   Server = https://repo.ricardtv.top/$arch
    ```
 3. Atualize a base de dados do Pacman e instale o pacote:
    ```bash
@@ -49,9 +49,9 @@ Você também pode baixar os arquivos binários diretamente:
 
 | Formato | Distribuições Compatíveis | Link de Download |
 | :--- | :--- | :--- |
-| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.rictv.top/x86_64/rp-play-max-linux-2.2.2.pkg.tar.xz) |
-| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.rictv.top/x86_64/RP%20-%20Play%20Max-2.2.2.AppImage) |
-| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.rictv.top/x86_64/rp-play-max-linux_2.2.2_amd64.deb) |
+| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.2.2.pkg.tar.xz) |
+| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.ricardtv.top/x86_64/RP%20-%20Play%20Max-2.2.2.AppImage) |
+| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.2.2_amd64.deb) |
 
 ---
 
