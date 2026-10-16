@@ -49,9 +49,9 @@ Você também pode baixar os arquivos binários diretamente:
 
 | Formato | Distribuições Compatíveis | Link de Download |
 | :--- | :--- | :--- |
-| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.2.2.pkg.tar.xz) |
-| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.ricardtv.top/x86_64/RP%20-%20Play%20Max-2.2.2.AppImage) |
-| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.2.2_amd64.deb) |
+| **`.pkg.tar.xz`** | Arch Linux, Manjaro, BigLinux, EndeavourOS | [Baixar .pkg.tar.xz](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.4.5.pkg.tar.xz) |
+| **`.AppImage`** | Todas as distribuições Linux (Universal Portátil) | [Baixar .AppImage](https://repo.ricardtv.top/x86_64/RP%20-%20Play%20Max-2.4.5.AppImage) |
+| **`.deb`** | Ubuntu, Debian, Linux Mint, Pop!_OS, Zorin OS | [Baixar .deb](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.4.5_amd64.deb) |
 
 ---
 
