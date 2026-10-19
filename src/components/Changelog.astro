@@ -1,20 +1,24 @@
 ---
 // Changelog.astro
 const changelogItems = [
-  "Correção no Player de Vídeo: Correção da referência de hooks do React (useCallback/useRef) e inicialização resiliente do player de vídeo",
-  "Sincronização em Nuvem Multi-Dispositivo: Histórico de reprodução ('Continuar Assistindo') e 'Minha Lista' (Favoritos) sincronizados automaticamente entre Linux Desktop e aplicativo Android/TV",
-  "Isolamento Estrito por Perfil: Cada perfil de usuário possui seu próprio histórico e lista de favoritos salvos na nuvem sem conflitos",
-  "Sincronização Imediata ao Fechar Vídeo: Progresso enviado imediatamente ao painel cloud ao pausar ou fechar o player",
-  "Correção Crítica no Guia de Jogos: Tratamento resiliente de emissoras e transmissões esportivas (apifut) prevenindo travamentos de interface e erro de execução",
-  "Defesa e Resiliência em Listagens: Sanitização completa de strings contra valores nulos e não-string em buscas e agrupamentos de canais, filmes e séries",
-  "Agrupamento Inteligente de Canais ao Vivo: Canais unificados por nome com badges de qualidade (4K, FHD, HD, SD, H265) e alternância direta no player",
-  "Failover Automático de Transmissão: Troca automática e transparente entre qualidades caso o sinal do canal fique instável ou congele",
-  "Ícone do Sistema Aprimorado: Novo ícone squircle em alta definição ocupando toda a área útil no menu de aplicativos do Linux",
-  "Correção de Reprodução HLS / M3U8: Carregamento instantâneo de streams ao vivo e VOD com buffer adaptativo aprimorado",
-  "Controles de Reprodução Sempre Acessíveis: Barra superior, botão de voltar e ESC totalmente operacionais mesmo em carregamento",
-  "Configuração de Aceleração por Hardware: Switch deslizante moderno nas configurações para alternar renderização via GPU",
-  "Deduplicação de Perfis de Usuário: Agrupamento limpo e automático de contas no modal de seleção",
-  "Segurança & Telemetria Silenciosa: Integração Aptabase nativa e sincronização dinâmica com DNS de contingência",
+  "Retomada Precisa de Reprodução: Ao continuar assistindo filmes e séries sincronizados com o Android/TV, o player Linux agora avança perfeitamente para o ponto exato da reprodução, sem reiniciar do início.",
+  "Enriquecimento Automático do Histórico: Carregamento em segundo plano dos catálogos VOD e Séries para exibir instantaneamente os títulos reais, pôsteres e metadados na tela inicial em vez de códigos numéricos.",
+  "Otimização do Painel Inicial: Remoção da seção estática de canais populares da dashboard para manter a tela focada nos seus conteúdos e transmissões ao vivo.",
+  "Telemetria & Versão v2.5.1: Atualização dos identificadores de build e eventos no Aptabase para a versão 2.5.1.",
+  "Correção no Player de Vídeo: Correção da referência de hooks do React (useCallback/useRef) e inicialização resiliente do player de vídeo.",
+  "Sincronização em Nuvem Multi-Dispositivo: Histórico de reprodução ('Continuar Assistindo') e 'Minha Lista' (Favoritos) sincronizados automaticamente entre Linux Desktop e aplicativo Android/TV.",
+  "Isolamento Estrito por Perfil: Cada perfil de usuário possui seu próprio histórico e lista de favoritos salvos na nuvem sem conflitos.",
+  "Sincronização Imediata ao Fechar Vídeo: Progresso enviado imediatamente ao painel cloud ao pausar ou fechar o player.",
+  "Correção Crítica no Guia de Jogos: Tratamento resiliente de emissoras e transmissões esportivas (apifut) prevenindo travamentos de interface e erro de execução.",
+  "Defesa e Resiliência em Listagens: Sanitização completa de strings contra valores nulos e não-string em buscas e agrupamentos de canais, filmes e séries.",
+  "Agrupamento Inteligente de Canais ao Vivo: Canais unificados por nome com badges de qualidade (4K, FHD, HD, SD, H265) e alternância direta no player.",
+  "Failover Automático de Transmissão: Troca automática e transparente entre qualidades caso o sinal do canal fique instável ou congele.",
+  "Ícone do Sistema Aprimorado: Novo ícone squircle em alta definição ocupando toda a área útil no menu de aplicativos do Linux.",
+  "Correção de Reprodução HLS / M3U8: Carregamento instantâneo de streams ao vivo e VOD com buffer adaptativo aprimorado.",
+  "Controles de Reprodução Sempre Acessíveis: Barra superior, botão de voltar e ESC totalmente operacionais mesmo em carregamento.",
+  "Configuração de Aceleração por Hardware: Switch deslizante moderno nas configurações para alternar renderização via GPU.",
+  "Deduplicação de Perfis de Usuário: Agrupamento limpo e automático de contas no modal de seleção.",
+  "Segurança & Telemetria Silenciosa: Integração Aptabase nativa e sincronização dinâmica com DNS de contingência.",
 ];
 ---
 
@@ -29,7 +33,7 @@ const changelogItems = [
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        <h3 class="changelog-title">Notas da Versão v2.5.0</h3>
+        <h3 class="changelog-title">Notas da Versão v2.5.1</h3>
       </div>
       <span class="changelog-date">Outubro de 2026</span>
     </div>
