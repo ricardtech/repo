@@ -15,7 +15,7 @@ Repositório oficial de pacotes binários pré-compilados e instaladores para di
 
 | Pacote | Versão Atual | Descrição | Arquitetura |
 | :--- | :--- | :--- | :--- |
-| **`paperplane-next`** | `0.1.0-2` | Cliente Telegram moderno, nativo, ultra-rápido e leve escrito em **Rust**, **GTK4** e **Libadwaita** com localização integral em Português do Brasil. | `x86_64` |
+| **`paperplane-next`** | `0.1.0-3` | Cliente Telegram moderno, nativo, ultra-rápido e leve escrito em **Rust**, **GTK4** e **Libadwaita** com localização integral em Português do Brasil. | `x86_64` |
 | **`rp-play-max-linux`** | `2.5.1` | Player multimídia de alta performance para reprodução de streaming, canais ao vivo, filmes e séries. | `x86_64` / `amd64` |
 
 ---
@@ -86,7 +86,7 @@ Se preferir realizar o download avulso dos pacotes ou utilizar distribuições b
 
 | Aplicativo | Formato | Compatibilidade | Download Direto |
 | :--- | :--- | :--- | :--- |
-| **PaperPlane Next** | `.pkg.tar.zst` | Arch Linux, Manjaro, BigLinux | [Baixar v0.1.0-2](https://repo.ricardtv.top/x86_64/paperplane-next-0.1.0-2-x86_64.pkg.tar.zst) |
+| **PaperPlane Next** | `.pkg.tar.zst` | Arch Linux, Manjaro, BigLinux | [Baixar v0.1.0-3](https://repo.ricardtv.top/x86_64/paperplane-next-0.1.0-3-x86_64.pkg.tar.zst) |
 | **RP - Play Max** | `.pkg.tar.xz` | Arch Linux, Manjaro, BigLinux | [Baixar v2.5.1](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.5.1.pkg.tar.xz) |
 | **RP - Play Max** | `.deb` | Ubuntu, Debian, Linux Mint, Pop!_OS | [Baixar v2.5.1 .deb](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.5.1_amd64.deb) |
 
@@ -102,7 +102,7 @@ Para administradores e mantenedores que atualizam os pacotes da base de dados:
    ```
 2. Atualize o banco de dados do repositório Pacman (`playmax.db`):
    ```bash
-   repo-add -n -R playmax.db.tar.gz paperplane-next-0.1.0-2-x86_64.pkg.tar.zst
+   repo-add -n -R playmax.db.tar.gz paperplane-next-0.1.0-3-x86_64.pkg.tar.zst
    ```
 3. Realize o commit e envie via Git com o Dual-Push simultâneo:
    ```bash
