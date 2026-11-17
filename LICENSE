@@ -1,0 +1,112 @@
+# LICENÇA PÚBLICA GERAL GNU
+## Versão 3, 29 de junho de 2007
+### Tradução não-oficial para o Português Brasileiro (PT-BR)
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>  
+Direitos Autorais (C) 2026 Organização RicardTech e Contribuidores.
+
+A qualquer pessoa é permitido copiar e distribuir cópias fiéis deste documento de licença, mas a sua modificação não é permitida.
+
+---
+
+### PREÂMBULO
+
+A Licença Pública Geral GNU é uma licença livre, com copyleft, para softwares e outras espécies de obras.
+
+As licenças para a maioria dos softwares e outras obras práticas são concebidas para retirar a sua liberdade de compartilhar e alterar as obras. Por outro lado, a Licença Pública Geral GNU tem a intenção de garantir a sua liberdade de compartilhar e alterar todas as versões de um programa — para assegurar que ele permaneça como software livre para todos os seus usuários.
+
+Nós, a Free Software Foundation e os mantenedores da RicardTech, usamos a Licença Pública Geral GNU para a maioria dos nossos programas; ela se aplica também a qualquer outro trabalho disponibilizado desta forma por seus autores. Você também pode aplicá-la aos seus próprios programas.
+
+Quando nos referimos a software livre, estamos nos referindo à liberdade, não ao preço. As nossas Licenças Públicas Gerais são projetadas para garantir que você tenha a liberdade de distribuir cópias de software livre (e cobrar por elas se desejar), que você receba o código-fonte ou possa obtê-lo se o quiser, que você possa modificar o software ou usar partes dele em novos programas livres, e que você saiba que pode fazer essas coisas.
+
+Para proteger os seus direitos, precisamos impedir que outros neguem a você esses direitos ou peçam que você renuncie a eles. Portanto, você tem certas responsabilidades se distribuir cópias do software ou modificá-lo: a responsabilidade de respeitar a liberdade dos outros.
+
+Por exemplo, se você distribuir cópias de um tal programa, seja gratuitamente ou por uma taxa, você deverá repassar aos destinatários as mesmas liberdades que recebeu. Deverá assegurar que eles também recebam ou possam obter o código-fonte. E deverá mostrar-lhes estes termos para que eles conheçam seus direitos.
+
+Desenvolvedores que usam a GNU GPL protegem seus direitos com dois passos: (1) afirmam os direitos autorais sobre o software, e (2) oferecem-lhe esta Licença, dando-lhe permissão legal para copiá-lo, distribuí-lo e/ou modificá-lo.
+
+---
+
+### TERMOS E CONDIÇÕES
+
+#### 0. Definições.
+
+"Esta Licença" se refere à versão 3 da Licença Pública Geral GNU.
+
+"Direitos autorais" também significa leis semelhantes a direitos autorais que se aplicam a outros tipos de obras, tais como máscaras de semicondutores.
+
+"O Programa" se refere a qualquer obra sob direitos autorais licenciada sob esta Licença. Cada licenciado é tratado como "você". "Licenciados" e "destinatários" podem ser indivíduos ou organizações.
+
+"Modificar" uma obra significa copiar ou adaptar toda ou parte da obra de uma forma que requeira permissão sob direitos autorais, que não seja a realização de uma cópia exata. A obra resultante é chamada de "versão modificada" da obra anterior ou de obra "baseada no" programa anterior.
+
+Uma "obra abrangida" significa ou o Programa não modificado ou uma obra baseada no Programa.
+
+---
+
+#### 1. Código-Fonte.
+
+O "código-fonte" de uma obra significa a forma preferida da obra para fazer modificações nela. "Código-objeto" significa qualquer forma não-fonte de uma obra.
+
+Uma "Interface Padrão" significa uma interface que ou é um padrão oficial definido por um organismo de padrões reconhecido ou, no caso de interfaces especificadas para uma linguagem de programação particular, uma que seja amplamente usada entre os desenvolvedores trabalhando nessa linguagem.
+
+---
+
+#### 2. Permissões Básicas.
+
+Todos os direitos concedidos sob esta Licença são concedidos pela duração dos direitos autorais sobre o Programa, e são irrevogáveis desde que as condições estabelecidas sejam cumpridas. Esta Licença afirma explicitamente a sua permissão ilimitada para executar o Programa não modificado. O resultado da execução de uma obra abrangida é coberto por esta Licença somente se o resultado, dado o seu conteúdo, constituir uma obra abrangida. Esta Licença reconhece os seus direitos de uso justo ou outro equivalente, conforme previsto pela legislação de direitos autorais.
+
+Você pode fazer, executar e propagar obras abrangidas que não transmitir, sem condições, desde que a sua licença de outra forma permaneça em vigor. Você pode transmitir obras abrangidas a terceiros com o único propósito de que eles façam modificações exclusivamente para você, ou forneçam-lhe instalações para executar essas obras, desde que você cumpra com os termos desta Licença ao transmitir todo o material para o qual você não controla os direitos autorais.
+
+---
+
+#### 3. Proteção aos Direitos Legais dos Usuários contra Leis Anti-Burla.
+
+Nenhuma obra abrangida deve ser considerada parte de uma medida técnica eficaz sob qualquer lei aplicável que cumpra as obrigações sob o artigo 11 do tratado de direitos autorais da WIPO adotado em 20 de dezembro de 1996, ou leis similares proibindo ou restringindo a burla de tais medidas.
+
+---
+
+#### 4. Transmissão de Cópias Fiéis.
+
+Você pode transmitir cópias fiéis do código-fonte do Programa à medida que o recebe, em qualquer meio, desde que você publique de forma visível e apropriada em cada cópia um aviso de direitos autorais apropriado; mantenha intactos todos os avisos informando que esta Licença e quaisquer termos não permissivos adicionados de acordo com a seção 7 se aplicam ao código; mantenha intactos todos os avisos sobre a ausência de qualquer garantia; e dê a todos os destinatários uma cópia desta Licença junto com o Programa.
+
+---
+
+#### 5. Transmissão de Versões com Código-Fonte Modificado.
+
+Você pode transmitir uma obra baseada no Programa, ou as modificações para produzi-la a partir do Programa, na forma de código-fonte sob os termos da seção 4, desde que atenda também a todas as seguintes condições:
+
+- a) A obra deve conter avisos proeminentes declarando que você a modificou, e dando uma data pertinente.
+- b) A obra deve conter avisos proeminentes declarando que ela é lançada sob esta Licença e quaisquer condições adicionadas sob a seção 7.
+- c) Você deve licenciar a obra inteira, como um todo, sob esta Licença a qualquer pessoa que venha a possuir uma cópia.
+- d) Se a obra tiver interfaces interativas com o usuário, cada uma deve exibir Avisos Legais Apropriados; contudo, se o Programa tiver interfaces interativas que não mostrem Avisos Legais Apropriados, a sua obra não precisa fazê-las mostrar.
+
+---
+
+#### 6. Transmissão de Formas Não-Fonte (Binários e Pacotes Pré-Compilados).
+
+Você pode transmitir uma obra abrangida em forma de código-objeto sob os termos das seções 4 e 5, desde que também transmita o Código-Fonte Correspondente legível por máquina sob os termos desta Licença, através de um dos seguintes meios:
+
+- a) Transmitir o código-objeto em, ou incorporado a, um produto físico, acompanhado pelo Código-Fonte Correspondente em um meio físico durável comumente usado para intercâmbio de software.
+- b) Transmitir o código-objeto acompanhado de uma oferta por escrito, válida por pelo menos três anos e válida enquanto você oferecer peças de reposição ou suporte ao cliente para aquele modelo de produto, para dar a qualquer pessoa que possua o código-objeto o Código-Fonte Correspondente.
+- c) Transmitir o código-objeto oferecendo acesso a partir de um local designado (gratuitamente ou por cobrança), e oferecer acesso equivalente ao Código-Fonte Correspondente no mesmo local ou através de repositórios públicos oficiais (como os repositórios oficiais GitHub e GitLab da **RicardTech**).
+
+---
+
+#### 7. Isenção de Garantia.
+
+NA MEDIDA PERMITIDA PELA LEI APLICÁVEL, NÃO HÁ GARANTIA PARA O PROGRAMA. EXCETO QUANDO ESTABELECIDO DE OUTRA FORMA POR ESCRITO, OS TITULARES DOS DIREITOS AUTORAIS E/OU OUTRAS PARTES FORNECEM O PROGRAMA "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, SEJA EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO A UM DETERMINADO FIM.
+
+TODO O RISCO QUANTO À QUALIDADE E DESEMPENHO DO PROGRAMA É SEU. CASO O PROGRAMA SE MOSTRE DEFEITUOSO, VOCÊ ASSUME O CUSTO DE TODA A MANUTENÇÃO, REPARO OU CORREÇÃO NECESSÁRIOS.
+
+---
+
+#### 8. Limitação de Responsabilidade.
+
+EM NENHUM CASO, A MENOS QUE EXIGIDO PELA LEI APLICÁVEL OU ACORDADO POR ESCRITO, QUALQUER TITULAR DE DIREITOS AUTORAIS, OU QUALQUER OUTRA PARTE QUE MODIFIQUE E/OU TRANSMITA O PROGRAMA CONFORME PERMITIDO ACIMA, SERÁ RESPONSÁVEL PERANTE VOCÊ POR DANOS, INCLUINDO QUAISQUER DANOS GERAIS, ESPECIAIS, INCIDENTAIS OU CONSEQUENCIAIS DECORRENTES DO USO OU DA INCAPACIDADE DE USAR O PROGRAMA.
+
+---
+
+**Organização RicardTech**  
+GitHub: [https://github.com/ricardtech](https://github.com/ricardtech)  
+GitLab: [https://gitlab.com/ricard-tech](https://gitlab.com/ricard-tech)  
+Portal Oficial: [https://repo.ricardtv.top](https://repo.ricardtv.top)

@@ -1,0 +1,49 @@
+# 📋 Registro de Alterações (Changelog) — Repositório Oficial RicardTech
+
+Todas as alterações notáveis, adições de pacotes, atualizações e correções no repositório de pacotes Linux da **RicardTech** (`repo.ricardtv.top`) serão documentadas neste arquivo.
+
+O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e segue as convenções de [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/).
+
+---
+
+## [2026-11-17] - Adição do PaperPlane Next e Expansão Multi-Projetos
+
+### 🚀 Adicionado
+- **Novo Pacote no Repositório:** `paperplane-next-0.1.0-1-x86_64.pkg.tar.zst` adicionado à árvore `x86_64/`.
+  - Cliente nativo do Telegram construído em **Rust**, **GTK4** e **Libadwaita**, revivido e mantido ativamente pela comunidade RicardTech.
+  - Suporte completo a traduções em Português do Brasil (PT-BR).
+  - Inclui binário otimizado, arquivos `.desktop`, ícones hicolor e serviço de integração com notificações do sistema.
+- **Indexação na Base de Dados:** Execução do `repo-add` para atualizar os bancos `playmax.db.tar.gz` e `playmax.files.tar.gz` contendo as entradas do `paperplane-next`.
+- **Documentação Oficial em PT-BR:**
+  - `README.md` reestruturado com tabelas comparativas, instruções completas para instalação direta via `pacman` e download avulso.
+  - `CHANGELOG.md` em Português Brasileiro registrando todo o histórico do repositório.
+  - `LICENSE` em Português Brasileiro definindo as regras de distribuição e software livre.
+
+### 🔄 Modificado
+- **Redundância Git (Dual-Push):** Configuração obrigatória de espelhamento com envio simultâneo para o GitHub (`https://github.com/ricardtech/repo.git`) e GitLab (`https://gitlab.com/ricard-tech/repo.git`).
+
+---
+
+## [2026-10-18] - Atualização do RP - Play Max Linux v2.5.1
+
+### 🚀 Adicionado
+- Pacotes binários atualizados da versão **v2.5.1**:
+  - `x86_64/rp-play-max-linux-2.5.1.pkg.tar.xz` (para distribuições baseadas em Arch Linux).
+  - `x86_64/rp-play-max-linux_2.5.1_amd64.deb` (para distribuições Debian/Ubuntu).
+
+### ⚡ Melhorado
+- Atualização do portal web estático desenvolvido em **Astro**, facilitando a navegação entre abas de distribuições e links rápidos de download.
+
+---
+
+## [2026-09-14] - Lançamento Inicial do Repositório (repo.ricardtv.top)
+
+### 🚀 Adicionado
+- Criação da infraestrutura do repositório com suporte a pacotes Arch Linux (ALPM).
+- Configuração do domínio personalizado `repo.ricardtv.top` com Cloudflare Pages e DNS seguro.
+- Primeiro pacote publicado: `rp-play-max-linux-2.2.2`.
+- Geração da base de dados inicial `playmax.db.tar.gz`.
+
+---
+
+© 2026 **RicardTech** • Todos os direitos reservados.
