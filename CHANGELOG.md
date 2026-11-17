@@ -9,8 +9,9 @@ O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog
 ## [2026-11-17] - Adição do PaperPlane Next e Expansão Multi-Projetos
 
 ### 🚀 Adicionado
-- **Novo Pacote no Repositório:** `paperplane-next-0.1.0-1-x86_64.pkg.tar.zst` adicionado à árvore `x86_64/`.
+- **Novo Pacote no Repositório (v0.1.0-2):** `paperplane-next-0.1.0-2-x86_64.pkg.tar.zst` adicionado à árvore `x86_64/`.
   - Cliente nativo do Telegram construído em **Rust**, **GTK4** e **Libadwaita**, revivido e mantido ativamente pela comunidade RicardTech.
+  - **Empacotamento 100% Autocontido:** Bibliotecas essenciais `libtdjson.so.1.8.19` (TDLib do Telegram) e `librlottie.so.0` (suporte a animações e stickers Lottie) embutidas nativamente em `/usr/lib/`, eliminando qualquer necessidade de compilação demorada pelo AUR.
   - Suporte completo a traduções em Português do Brasil (PT-BR).
   - Inclui binário otimizado, arquivos `.desktop`, ícones hicolor e serviço de integração com notificações do sistema.
 - **Indexação na Base de Dados:** Execução do `repo-add` para atualizar os bancos `playmax.db.tar.gz` e `playmax.files.tar.gz` contendo as entradas do `paperplane-next`.
