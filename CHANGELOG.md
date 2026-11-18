@@ -6,6 +6,22 @@ O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog
 
 ---
 
+## [2026-11-17] - Menu Lateral Telegram Desktop, Modo Noturno e Preferências Expandidas (v0.1.0-4)
+
+### 🚀 Adicionado
+- **Menu Lateral Oficial Estilo Telegram Desktop:**
+  - Adicionados atalhos rápidos para **Contas / Alternar Sessão**, **Chats Arquivados**, **Contatos** e **Mensagens Salvas** (seleção direta do chat privado pessoal).
+  - Interruptor rápido de **Alternar Modo Noturno** com persistência nas configurações do Libadwaita (`adw::StyleManager`).
+- **Janela de Preferências Expandida (5 Páginas):**
+  - **Geral:** Esquema de cores (Seguir sistema / Tema escuro) e comportamento de chat (Enviar com Enter / Quebra com Shift+Enter).
+  - **Notificações:** Controles para chats privados, grupos e canais.
+  - **Privacidade & Segurança:** Atalho para gerenciar sessões ativas de outros dispositivos e aviso de 2FA.
+  - **Armazenamento:** Indicador de tamanho de cache em tempo real e botão com estilo destacado para limpeza de cache.
+  - **Idioma:** Exibição com badge de seleção de Português (Brasil).
+- **Novo Pacote no Repositório (v0.1.0-4):** `paperplane-next-0.1.0-4-x86_64.pkg.tar.zst` na árvore `x86_64/` com binário Rust compilado com LTO (*Link-Time Optimization*).
+
+---
+
 ## [2026-11-17] - Adição do PaperPlane Next e Correção de Inicialização (v0.1.0-3)
 
 ### 🐛 Corrigido
