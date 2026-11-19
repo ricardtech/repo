@@ -1,0 +1,92 @@
+---
+// Features.astro
+const features = [
+  {
+    icon: "⚡",
+    title: "Engine Dupla HLS & MPEG-TS",
+    desc: "Alternância automática e inteligente entre buffers .m3u8 e .ts para carregamento instantâneo de canais e filmes.",
+  },
+  {
+    icon: "🛡️",
+    title: "Zero Exposição & Alta Segurança",
+    desc: "Endpoints e credenciais protegidos com criptografia em repouso e em trânsito com DoT e HTTPS nativo.",
+  },
+  {
+    icon: "📊",
+    title: "Telemetria Inteligente Deduplicada",
+    desc: "Rastreamento leve e preciso de playback sem impactar a memória nem a CPU do sistema operacional.",
+  },
+  {
+    icon: "🐧",
+    title: "Integração Nativa ao Linux",
+    desc: "Suporte completo a aceleração por hardware (VA-API), Wayland, X11 e atalhos de mídia do teclado.",
+  },
+];
+---
+
+<section class="features-section">
+  <div class="features-grid">
+    {features.map((feat) => (
+      <div class="feature-card">
+        <div class="feature-icon">{feat.icon}</div>
+        <div class="feature-content">
+          <h3 class="feature-title">{feat.title}</h3>
+          <p class="feature-desc">{feat.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features-section {
+    width: 100%;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .feature-card {
+    background: rgba(18, 24, 38, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.2s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(139, 92, 246, 0.25);
+    background: rgba(18, 24, 38, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .feature-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .feature-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .feature-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+</style>
