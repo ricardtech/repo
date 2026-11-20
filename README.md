@@ -2,6 +2,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-ricardtech%2Frepo-181717?logo=github)](https://github.com/ricardtech/repo)
 [![GitLab](https://img.shields.io/badge/GitLab-ricard--tech%2Frepo-FC6D26?logo=gitlab)](https://gitlab.com/ricard-tech/repo)
+[![Forgejo](https://img.shields.io/badge/Forgejo-RicardTech%2Frepo-orange?logo=forgejo)](https://git.ricardtech.top/RicardTech/repo)
 [![Licença](https://img.shields.io/badge/Licença-GPL--3.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Ativo-success.svg)](https://repo.ricardtv.top)
 
@@ -15,6 +16,7 @@ Repositório oficial de pacotes binários pré-compilados e instaladores para di
 
 | Pacote | Versão Atual | Descrição | Arquitetura |
 | :--- | :--- | :--- | :--- |
+| **`ricardhub-desktop`** | `2.4.4-1` | Cliente e navegador desktop nativo em **Rust** e **WebKitGTK** dedicado para a Central Operacional Ricard Hub. | `x86_64` |
 | **`paperplane-next`** | `0.1.0-4` | Cliente Telegram moderno, nativo, ultra-rápido e leve escrito em **Rust**, **GTK4** e **Libadwaita** com localização integral em Português do Brasil. | `x86_64` |
 | **`rp-play-max-linux`** | `2.5.1` | Player multimídia de alta performance para reprodução de streaming, canais ao vivo, filmes e séries. | `x86_64` / `amd64` |
 
@@ -29,12 +31,17 @@ Com o repositório adicionado ao seu `/etc/pacman.conf`, todos os pacotes são i
 Adicione o repositório oficial da RicardTech e atualize as listas:
 
 ```bash
-echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.ricardtv.top/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy
+echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.ricardtv.top/\$arch\nServer = https://git.ricardtech.top/RicardTech/repo/raw/branch/main/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy
 ```
 
 ### Instalação dos Aplicativos
 
 Após adicionar o repositório, basta instalar diretamente:
+
+- **Para instalar o Ricard Hub Desktop (Rust / WebKitGTK):**
+  ```bash
+  sudo pacman -S ricardhub-desktop
+  ```
 
 - **Para instalar o PaperPlane Next (Telegram Nativo):**
   ```bash

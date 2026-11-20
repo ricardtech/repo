@@ -6,6 +6,19 @@ O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog
 
 ---
 
+## [2026-11-20] - Adição do Ricard Hub Desktop (v2.4.4-1)
+
+### 🚀 Adicionado
+- **Novo Pacote no Repositório (v2.4.4-1):** `ricardhub-desktop-2.4.4-1-x86_64.pkg.tar.zst` adicionado à árvore `x86_64/`.
+  - Cliente e navegador nativo ultraleve em **Rust** e **WebKitGTK / Wry** dedicado para a Central Operacional **Ricard Hub** (`https://hub.ricardtech.top`).
+  - **Eficiência Extrema:** Executável leve (~480 KB) e consumo reduzido de memória RAM (40 MB a 60 MB), substituindo navegadores pesados.
+  - **Bypass de iFrames e Resolução de Cookies:** Implementação de `CookieAcceptPolicy::Always`, permitindo navegação sem loops em iframes (Dokploy, Aptabase, Omni Gestor).
+  - **Integração Desktop:** Arquivo `.desktop` registrado no menu de aplicativos, ícones hicolor e persistência de sessão e cookies em `~/.config/ricardhub-desktop/`.
+- **Indexação na Base de Dados ALPM:** Execução do `repo-add` para atualizar `playmax.db.tar.gz` e `playmax.files.tar.gz` contendo as entradas do `ricardhub-desktop`.
+- **Compatibilidade Multi-Mirror:** Bancos binários preservados como arquivos regulares para suporte idêntico no GitHub Pages (`repo.ricardtv.top`) e Forgejo (`git.ricardtech.top`).
+
+---
+
 ## [2026-11-17] - Menu Lateral Telegram Desktop, Modo Noturno e Preferências Expandidas (v0.1.0-4)
 
 ### 🚀 Adicionado
