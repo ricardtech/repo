@@ -31,7 +31,7 @@ Com o repositório adicionado ao seu `/etc/pacman.conf`, todos os pacotes são i
 Adicione o repositório oficial da RicardTech com redundância (GitHub Pages CDN + Espelho Forgejo) e atualize as listas:
 
 ```bash
-echo -e "\n[playmax]\nSigLevel = Optional TrustAll\nServer = https://repo.ricardtv.top/\$arch\nServer = https://git.ricardtech.top/RicardTech/repo/raw/branch/main/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy
+echo -e "\n[ricardtech]\nSigLevel = Optional TrustAll\nServer = https://repo.ricardtv.top/\$arch\nServer = https://git.ricardtech.top/RicardTech/repo/raw/branch/main/\$arch" | sudo tee -a /etc/pacman.conf && sudo pacman -Sy
 ```
 
 ### Instalação dos Aplicativos
@@ -60,11 +60,12 @@ Caso prefira editar manualmente:
    ```
 2. Adicione as seguintes linhas ao final do arquivo:
    ```ini
-   [playmax]
+   [ricardtech]
    SigLevel = Optional TrustAll
    Server = https://repo.ricardtv.top/$arch
    Server = https://git.ricardtech.top/RicardTech/repo/raw/branch/main/$arch
    ```
+   *(Nota: A seção legada `[playmax]` continua ativa e compatível para instalações anteriores).*
 3. Salve o arquivo (`Ctrl + O`, `Enter` e `Ctrl + X`).
 4. Atualize a base de dados:
    ```bash
