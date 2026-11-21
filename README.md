@@ -135,4 +135,4 @@ Este repositório é publicado simultaneamente sob a organização oficial **Ric
 
 Consulte o arquivo [LICENSE](LICENSE) para termos detalhados em Português Brasileiro (PT-BR).
 
-© 2026 **RicardTech** • Todos os direitos reservados.
+© 2026 **Ricard Tech** • Todos os direitos reservados.
