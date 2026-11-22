@@ -1,5 +1,13 @@
 # 🚀 Repositório Oficial Linux — RicardTech (repo.ricardtv.top)
 
+<!-- ricardtech-metrics:start -->
+<p align="center">
+  <a href="https://github.com/alaxricardsilva/ricardtech-metrics">
+    <img src="https://raw.githubusercontent.com/alaxricardsilva/ricardtech-metrics/main/charts/repo.svg" alt="Métricas do Repositório" />
+  </a>
+</p>
+<!-- ricardtech-metrics:end -->
+
 [![Versão](https://img.shields.io/badge/Versão-v2.6.0-blue.svg)](CHANGELOG.md)
 [![GitHub](https://img.shields.io/badge/GitHub-ricardtech%2Frepo-181717?logo=github)](https://github.com/ricardtech/repo)
 [![GitLab](https://img.shields.io/badge/GitLab-ricard--tech%2Frepo-FC6D26?logo=gitlab)](https://gitlab.com/ricard-tech/repo)
