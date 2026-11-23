@@ -6,6 +6,16 @@ O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog
 
 ---
 
+## [v2.6.1] - 2026-11-23
+
+### 🔄 Atualizado
+- **Ricard Hub Desktop (v2.4.6-1):** Atualizado pacote `ricardhub-desktop-2.4.6-1-x86_64.pkg.tar.zst` na árvore `x86_64/`.
+  - Correção definitiva de tela em branco em iframes sobrepostos (Dokploy, Dozzle) via aprimoramento de detecção de visibilidade no DOM.
+  - Otimização do auto-login para SPAs assíncronas com janela de polling estendida para 30s e suporte a navegação por rotas.
+  - Atualizadas as bases de dados oficiais do repositório ALPM (`ricardtech.db` e `playmax.db`).
+
+---
+
 ## [v2.6.0] - 2026-11-20
 
 ### 🚀 Adicionado
