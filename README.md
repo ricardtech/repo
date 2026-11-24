@@ -96,11 +96,14 @@ Caso prefira editar manualmente:
 
 Se preferir realizar o download avulso dos pacotes ou utilizar distribuições baseadas em Debian/Ubuntu:
 
-| Aplicativo | Formato | Compatibilidade | Download Direto |
-| :--- | :--- | :--- | :--- |
-| **Ricard Hub Desktop** | `.pkg.tar.zst` | Arch Linux, Manjaro, BigLinux | [Baixar v2.4.4-1](https://repo.ricardtv.top/x86_64/ricardhub-desktop-2.4.4-1-x86_64.pkg.tar.zst) |
-| **RP - Play Max** | `.pkg.tar.xz` | Arch Linux, Manjaro, BigLinux | [Baixar v2.5.1](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.5.1.pkg.tar.xz) |
-| **RP - Play Max** | `.deb` | Ubuntu, Debian, Linux Mint, Pop!_OS | [Baixar v2.5.1 .deb](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.5.1_amd64.deb) |
+| Aplicativo | Formato | Versão | Compatibilidade | Download Direto |
+| :--- | :--- | :--- | :--- | :--- |
+| **Ricard Hub Desktop** | `.pkg.tar.zst` | `v2.4.7-1` | Arch Linux, Manjaro, BigLinux | [Baixar v2.4.7-1 (488 KB)](https://repo.ricardtv.top/x86_64/ricardhub-desktop-2.4.7-1-x86_64.pkg.tar.zst) |
+| **Ricard Hub Desktop** | `.AppImage` | `v2.4.7` | Universal (Todas as Distros Linux 64-bit) | [Baixar v2.4.7 AppImage](https://github.com/ricardtech/RicardHubDesktop/releases/download/v2.4.7/RicardHub-2.4.7-x86_64.AppImage) |
+| **Ricard Hub Desktop** | `.deb` | `v2.4.7` | Ubuntu, Debian, Linux Mint, Pop!_OS | [Baixar v2.4.7 .deb](https://github.com/ricardtech/RicardHubDesktop/releases/download/v2.4.7/ricardhub-desktop_2.4.7_amd64.deb) |
+| **RP - Play Max** | `.pkg.tar.xz` | `v2.5.1` | Arch Linux, Manjaro, BigLinux | [Baixar v2.5.1 (80.4 MB)](https://repo.ricardtv.top/x86_64/rp-play-max-linux-2.5.1.pkg.tar.xz) |
+| **RP - Play Max** | `.AppImage` | `v2.5.1` | Universal (Todas as Distros Linux 64-bit) | [Baixar v2.5.1 AppImage](https://github.com/ricardtech/repo/releases/download/v2.5.1/RP%20-%20Play%20Max-2.5.1.AppImage) |
+| **RP - Play Max** | `.deb` | `v2.5.1` | Ubuntu, Debian, Linux Mint, Pop!_OS | [Baixar v2.5.1 .deb (80.3 MB)](https://repo.ricardtv.top/x86_64/rp-play-max-linux_2.5.1_amd64.deb) |
 
 ---
 
@@ -112,13 +115,10 @@ Para administradores e mantenedores que atualizam os pacotes da base de dados:
    ```bash
    cd x86_64
    ```
-2. Atualize o banco de dados do repositório Pacman (`playmax.db`):
+2. Atualize os bancos de dados do repositório Pacman (`ricardtech.db` e `playmax.db`):
    ```bash
-   repo-add -n -R playmax.db.tar.gz ricardhub-desktop-2.4.4-1-x86_64.pkg.tar.zst
-   # Garanta a cópia regular para compatibilidade com mirrors estáticos
-   rm -f playmax.db playmax.files
-   cp -f playmax.db.tar.gz playmax.db
-   cp -f playmax.files.tar.gz playmax.files
+   repo-add -n -R ricardtech.db.tar.gz ricardhub-desktop-2.4.7-1-x86_64.pkg.tar.zst
+   repo-add -n -R playmax.db.tar.gz ricardhub-desktop-2.4.7-1-x86_64.pkg.tar.zst
    ```
 3. Realize o commit e envie via Git com o Triplo-Push simultâneo:
    ```bash
