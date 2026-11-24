@@ -8,7 +8,7 @@
 </p>
 <!-- ricardtech-metrics:end -->
 
-[![Versão](https://img.shields.io/badge/Versão-v2.6.1-blue.svg)](CHANGELOG.md)
+[![Versão](https://img.shields.io/badge/Versão-v2.6.2-blue.svg)](CHANGELOG.md)
 [![GitHub](https://img.shields.io/badge/GitHub-ricardtech%2Frepo-181717?logo=github)](https://github.com/ricardtech/repo)
 [![GitLab](https://img.shields.io/badge/GitLab-ricard--tech%2Frepo-FC6D26?logo=gitlab)](https://gitlab.com/ricard-tech/repo)
 [![Forgejo](https://img.shields.io/badge/Forgejo-RicardTech%2Frepo-orange?logo=forgejo)](https://git.ricardtech.top/RicardTech/repo)
@@ -25,7 +25,7 @@ Repositório oficial de pacotes binários pré-compilados e instaladores para di
 
 | Pacote | Versão Atual | Descrição | Arquitetura |
 | :--- | :--- | :--- | :--- |
-| **`ricardhub-desktop`** | `2.4.6-1` | Cliente e navegador desktop nativo ultraleve em **Rust** e **WebKitGTK** dedicado para a Central Operacional Ricard Hub (`https://hub.ricardtech.top`). | `x86_64` |
+| **`ricardhub-desktop`** | `2.4.7-1` | Cliente e navegador desktop nativo ultraleve em **Rust** e **WebKitGTK** dedicado para a Central Operacional Ricard Hub (`https://hub.ricardtech.top`). | `x86_64` |
 | **`rp-play-max-linux`** | `2.5.1` | Player multimídia de alta performance para reprodução de streaming, canais ao vivo, filmes e séries. | `x86_64` / `amd64` |
 
 ---

@@ -6,6 +6,16 @@ O formato é baseado nas diretrizes de [Keep a Changelog](https://keepachangelog
 
 ---
 
+## [v2.6.2] - 2026-11-24
+
+### 🔄 Atualizado
+- **Ricard Hub Desktop (v2.4.7-1):** Atualizado pacote `ricardhub-desktop-2.4.7-1-x86_64.pkg.tar.zst` na árvore `x86_64/`.
+  - Inversão da coleta de credenciais de auto-login via Top-Frame (`hub.ricardtech.top`) com despacho por IPC seguro em Rust, eliminando bloqueios de CORS do navegador.
+  - Desativação do ITP no WebKitGTK para garantir persistência de cookies `SameSite=Lax` em conexões WebSockets/EventSource e encerrar loops de recarregamento no Dozzle.
+  - Atualizadas as bases de dados oficiais do repositório ALPM (`ricardtech.db` e `playmax.db`).
+
+---
+
 ## [v2.6.1] - 2026-11-23
 
 ### 🔄 Atualizado
